@@ -1,0 +1,36 @@
+:root {
+	// COLORS
+	//primary
+	--color-primary-cyan: #2ab2af;
+	--color-primary-yello: #c0df34;
+	// Gray
+	--color-gray-light: #e5eff5;
+	--color-gray-dark: #98a6bd;
+
+	/*
+  - Mobile: 375px
+  - Desktop: 1440px
+  */
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+body,
+body *,
+body *::after,
+body *::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Karla', sans-serif;
+	font-weight: 400;
+
+	background-color: var(--color-gray-light);
+
+	padding: 16rem 40rem;
+}
