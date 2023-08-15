@@ -27,10 +27,8 @@ body *::before {
 }
 
 body {
+	background-color: var(--color-gray-light);
 	font-family: 'Karla', sans-serif;
 	font-weight: 400;
-
-	background-color: var(--color-gray-light);
-
 	padding: 16rem 40rem;
 }
