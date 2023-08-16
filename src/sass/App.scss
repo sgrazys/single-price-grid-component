@@ -40,34 +40,41 @@ body *::before {
 }
 
 body {
-	display: flex;
-	justify-content: center;
 	background-color: var(--color-gray-light);
 	font-family: 'Karla', sans-serif;
-	padding: 5rem 3.5rem;
+	padding: 3rem 2.5rem;
 	max-height: 100vh;
+}
+
+.app-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
+	margin: 0;
+
+	@media only screen and (min-width: 40.625em) {
+		border-radius: 1rem;
+	}
 }
 
 .card {
 	display: grid;
 
-	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-
 	@media only screen and (min-width: 40.625em) {
-		max-width: 80rem;
 		grid-template-columns: 1fr 1fr;
 	}
 	@media only screen and (min-width: 64em) {
-		max-width: 100rem;
+		width: 100%;
 	}
 
 	.header {
 		display: grid;
 		grid-gap: 1.8rem;
 		background-color: #fff;
-
-		border-top-left-radius: 0.5rem;
-		border-top-right-radius: 0.5rem;
 
 		@include padding-regular;
 
@@ -121,10 +128,6 @@ body {
 		background-color: var(--color-primary-cyan);
 		@include padding-regular;
 
-		@media only screen and (min-width: 40.625em) {
-			border-bottom-left-radius: 5px;
-		}
-
 		&--header {
 			font-size: 1.8rem;
 			@include margin-bottom-sm;
@@ -152,7 +155,7 @@ body {
 		&--description {
 			font-size: 1.6rem;
 			letter-spacing: -0.2px;
-			margin-bottom: 1rem;
+			margin-bottom: 2rem;
 		}
 
 		&--btn {
@@ -161,20 +164,24 @@ body {
 			font-weight: 700;
 			color: inherit;
 			border: none;
+			width: 100%;
 			border-radius: 5px;
 			box-shadow: 0 0.6rem 1rem rgb(0, 0, 0, 0.2);
+			cursor: pointer;
+			transition: all 0.3s;
 
 			padding: 1.5rem;
 			background-color: var(--color-primary-yellow);
 
-			@media only screen and (min-width: 64em) {
-				width: 65%;
-				font-size: 1.8rem;
+			&:hover {
+				transform: scale(1.05) translateY(-3px);
+				box-shadow: 0 1.2rem 1rem rgb(0, 0, 0, 0.2);
 			}
 
-			// @media only screen and (min-width: 90em) {
-			// 	width: 55%;
-			// }
+			@media only screen and (min-width: 64em) {
+				width: 75%;
+				font-size: 1.8rem;
+			}
 		}
 	}
 
