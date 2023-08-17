@@ -25,10 +25,6 @@
 html {
 	scroll-behavior: smooth;
 	font-size: 62.5%;
-
-	@media only screen and (min-width: 64em) {
-		font-size: 82.5%;
-	}
 }
 body,
 body *,
@@ -54,10 +50,12 @@ body {
 	border-top-right-radius: 1rem;
 	overflow: hidden;
 	box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
-	margin: 0;
+	margin: 2rem 0;
 
 	@media only screen and (min-width: 37.5em) {
 		border-radius: 1rem;
+		max-width: 63.5rem;
+		margin: 5rem auto;
 	}
 }
 
@@ -66,9 +64,7 @@ body {
 
 	@media only screen and (min-width: 37.5em) {
 		grid-template-columns: 1fr 1fr;
-	}
-	@media only screen and (min-width: 64em) {
-		width: 100%;
+		max-width: 63.5rem;
 	}
 
 	.header {
@@ -95,10 +91,6 @@ body {
 		&--content {
 			display: grid;
 			grid-gap: 1.2rem;
-
-			@media only screen and (min-width: 64em) {
-				width: 85%;
-			}
 		}
 
 		&--subheading {
@@ -179,7 +171,6 @@ body {
 			}
 
 			@media only screen and (min-width: 64em) {
-				width: 75%;
 				font-size: 1.8rem;
 			}
 		}
@@ -210,11 +201,11 @@ body {
 	gap: 1rem;
 	justify-content: center;
 	color: var(--color-primary-cyan);
-	margin: 2rem;
 
 	@media only screen and (max-width: 23.375em) {
 		flex-direction: column;
 		align-items: center;
+		padding: 2rem 0;
 	}
 
 	a {
